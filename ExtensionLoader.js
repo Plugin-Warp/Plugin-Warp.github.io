@@ -29,9 +29,6 @@ async function fetchrepocontents(url) {
 }
 
 function AddListItem(item, fileTree, ExtAuthor) {
-    // Skip excluded files
-    if (excludedFiles.includes(item.name)) return;
-
     const listItem = document.createElement('li');
     listItem.classList.add(item.type);
     listItem.classList.add(item.type === 'dir' ? 'folder' : 'file');
