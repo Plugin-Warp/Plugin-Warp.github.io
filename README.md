@@ -15,7 +15,7 @@
 ## Explore  
 
 Discover the full collection at the **PluginWarp Website**:  
-👉 **[Here!](https://plugin-warp.github.io/PluginWarp)**  
+👉 **[Here!](https://plugin-warp.github.io)**  
 
 ---
 
