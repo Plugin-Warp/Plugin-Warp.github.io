@@ -26,16 +26,7 @@
                 } else {
                     ReportErrorOnPage()
                 }
-        }
 
-        async function fetchrepocontentcredits() {
-            const response = await fetch("https://raw.githubusercontent.com/Plugin-Warp/Plugin-Warp.github.io/refs/heads/main/extensions/Credits.json");
-            if (response.ok) {
-                const data = await response.json();
-                return data
-            } else {
-                ReportErrorOnPage()
-            }
     }
 
         function AddListItem(item, fileTree, ExtAuthor){
