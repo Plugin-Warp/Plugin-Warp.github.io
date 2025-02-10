@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup Example</title>
+    <title>Pluginwarp Extensions</title>
+    <link rel="stylesheet" href="Style.CSS">
+    <link rel="icon" href="Images/Favicon.ico">
+
+    <!-- Website Sharing MetaData -->
+    <meta name="description" content="Free extensions for penguinmod/turbowarp/snail-ide!">
+    <meta name="keywords" content="Penguinmod, Turbowarp, Extensions, Pluginwarp">
+    <meta property="og:title" content="Pluginwarp Extensions">
+    <meta property="og:description" content="Free extensions for penguinmod/turbowarp/snail-ide!">
+    <meta property="og:image" content="https://plugin-warp.github.io/Plugin-Warp/Images/Thumbnail.png">
+    <meta property="og:url" content="https://plugin-warp.github.io/PluginWarp/">
+    <meta name="twitter:title" content="PluginWarp Extensions">
+    <meta name="twitter:description" content="Free extensions for penguinmod/turbowarp/snail-ide!">
+    <meta name="twitter:image" content="https://plugin-warp.github.io/PluginWarp/Images/Thumbnail.png">
+
     <style>
         /* Popup Styling */
         .popup-container {
@@ -47,25 +61,85 @@
         .close-btn:hover {
             background: #cc0000;
         }
+
+        /* Header Container */
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between header and button */
+        }
+        .download-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Center H1 and H2 */
+        h1, h2.ToastingNoa {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Popup Message -->
     <div id="popupContainer" class="popup-container">
         <div class="popup">
             <div class="popup-header">New Releases!</div>
-            <div class="popup-message" id="popupMessage">This is the default message.</div>
+            <div class="popup-message" id="popupMessage">
+                We Released UploadWarp and WarpForge! Check them out at the bottom of the site.
+            </div>
             <button class="close-btn" onclick="closePopup()">Close</button>
         </div>
     </div>
 
+	<!-- Header with Download Button -->
+	<div class="header-container">
+		<h1>PluginWarp Extensions Directory!</h1>
+	</div>
+
+
+    <h2 class="ToastingNoa">Maintained by the HAMPTER</h2>
+    <h3 class="DiscordServer" style="text-align: center; padding: 1%;">
+        <img draggable="false" src="Images/discord.png">
+        <a class="Link" href="https://discord.gg/PzFZekdKp4">Join our discord server!</a>
+    </h3>
+    <h4 style="text-align: center;">Download Mode: <span><button type="button" data-toggle="null" class="ModeButton">Loading</button></span></h4>
+    
+    <div class="SearchBox"><input class="SearchField" type="search" placeholder="Search"></div>
+    <ul class="file-tree" id="file-tree" data-loaded="false"></ul>
+    <div id="file-content"></div>
+
+    <!-- Spinner for loading -->
+    <div class="spinner" id="spinner" style="display: block;"></div>
+	
+	<button class="download-btn" onclick="downloadRepo()">Download Pluginwarp</button>
+
+    <footer class="Footer">
+        PluginWarp Extensions sourced from many creators! • Contact for issues in discord server 
+        <br>Website Owner and Developer - Hampter<br>
+        Check out <a class="Link" href="https://plugin-warp.github.io/Uploader/">UploadWarp</a> and 
+        <a class="Link" href="https://plugin-warp.github.io/WarpForge/editor/">WarpForge</a> - Hampter
+    </footer>
+
+    <script src="ExtensionLoader.js"></script>
+    <script src="ExtensionDownloader.js"></script>
+
     <script>
-        function openPopup(message) {
-            document.getElementById("popupMessage").innerText = message; // Set the message
+        // Function to Open Popup
+        function openPopup() {
             document.getElementById("popupContainer").style.visibility = "visible";
             document.getElementById("popupContainer").style.opacity = "1";
         }
 
+        // Function to Close Popup
         function closePopup() {
             document.getElementById("popupContainer").style.opacity = "0";
             setTimeout(() => {
@@ -73,53 +147,14 @@
             }, 300);
         }
 
-        // Example: Open the popup with a custom message
-        setTimeout(() => {
-            openPopup("We Released Uploadwarp and Warpforge! check them out at the bottom of the site");
-        }, 1000); // Delay for 1 second
+        // Auto-open popup after 1 second
+        setTimeout(openPopup, 1000);
+
+        // Function to Download Repo ZIP
+        function downloadRepo() {
+            window.location.href = "https://github.com/Plugin-Warp/Plugin-Warp.github.io/archive/refs/heads/main.zip";
+        }
     </script>
 
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pluginwarp Extensions</title>
-    <link rel="stylesheet" href="Style.CSS">
-    <link rel="icon" href="Images/Favicon.ico">
-
-    <!-- Website Sharing MetaData -->
-     <meta name="description" content="Free extensions for penguinmod/turbowarp/snail-ide!">
-     <meta name="keywords" content="Penguinmod, Turbowarp, Extensions, Pluginwarp">
-
-    <meta property="og:title" content="Pluginwarp Extensions">
-    <meta property="og:description" content="Free extensions for penguinmod/turbowarp/snail-ide!">
-    <meta property="og:image" content="https://plugin-warp.github.io/Plugin-Warp/Images/Thumbnail.png">
-    <meta property="og:url" content="https://plugin-warp.github.io/PluginWarp/">
-    <meta name="twitter:title" content="PluginWarp Extensions">
-    <meta name="twitter:description" content="Free extensions for penguinmod/turbowarp/snail-ide!">
-    <meta name="twitter:image" content="https://plugin-warp.github.io/PluginWarp/Images/Thumbnail.png">
-
-</head>
-<body>
-
-    <h1>PluginWarp Extensions Directory!</h1>
-    <h2 class="ToastingNoa">Maintained by the HAMPTER</h2>
-    <h3 class="DiscordServer" style="text-align: center; padding: 1%;"><img draggable="false" src="Images/discord.png"><a class="Link" href="https://discord.gg/PzFZekdKp4">Join our discord server!</a></h3>
-    <h4 style="text-align: center;">Download Mode: <span><button type="button" data-toggle="null" class="ModeButton">Loading</button></span></h4>
-    <div class="SearchBox"><input class="SearchField" type="search" placeholder="Search"></div>
-    
-    <ul class="file-tree" id="file-tree" data-loaded="false"></ul>
-    <div id="file-content"></div>
-
-    <!-- Spinner for loading -->
-    <div class="spinner" id="spinner" style="display: block;"></div>
-
-    <footer class="Footer">PluginWarp Extensions sourced from many creators! • Contact for issues in discord server <br>Website Owner and Developer - Hampter<br>Check out <a class="Link" href="https://plugin-warp.github.io/Uploader/">UploadWarp</a> and <a class="Link" href="https://plugin-warp.github.io/WarpForge/editor/">WarpForge</a> - Hampter</footer>
-    <script src="ExtensionLoader.js"></script>
-    <script src="ExtensionDownloader.js"></script>
 </body>
 </html>
