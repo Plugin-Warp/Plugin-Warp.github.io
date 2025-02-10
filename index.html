@@ -1,3 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <style>
+        /* Popup Styling */
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .popup {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .popup-header {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .popup-message {
+            margin: 15px 0;
+        }
+        .close-btn {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .close-btn:hover {
+            background: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="popupContainer" class="popup-container">
+        <div class="popup">
+            <div class="popup-header">New Releases!</div>
+            <div class="popup-message" id="popupMessage">This is the default message.</div>
+            <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(message) {
+            document.getElementById("popupMessage").innerText = message; // Set the message
+            document.getElementById("popupContainer").style.visibility = "visible";
+            document.getElementById("popupContainer").style.opacity = "1";
+        }
+
+        function closePopup() {
+            document.getElementById("popupContainer").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("popupContainer").style.visibility = "hidden";
+            }, 300);
+        }
+
+        // Example: Open the popup with a custom message
+        setTimeout(() => {
+            openPopup("We Released Uploadwarp and Warpforge! check them out at the bottom of the site");
+        }, 1000); // Delay for 1 second
+    </script>
+
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en">
