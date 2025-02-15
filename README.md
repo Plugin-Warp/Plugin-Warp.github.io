@@ -1,6 +1,6 @@
-# PluginWarp  
+# WarpCore Impact  
 
-**Pluginwarp** is a curated collection of over **240+ TurboWarp plugins**, gathered from across the community to enhance and extend the functionality of the TurboWarp Scratch-based editor. Whether you're looking for new tools, creative enhancements, or utilities, PluginWarp brings them all together in one place.  
+**WarpCore Impact** is a curated collection of over **240+ WarpCore plugins**, gathered from across the community to enhance and extend the functionality of the TurboWarp Scratch-based editor. Whether you're looking for new tools, creative enhancements, or utilities, PluginWarp brings them all together in one place.  
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Explore  
 
-Discover the full collection at the **PluginWarp Website**:  
+Discover the full collection at the **Impact Website**:  
 👉 **[Here!](https://plugin-warp.github.io)**  
 
 ---
@@ -33,16 +33,11 @@ Discover the full collection at the **PluginWarp Website**:
 
 If you know of a TurboWarp plugin that isn't included in PluginWarp, let us know! You can contribute by:  
 
-1. Suggesting the plugin via the **[GitHub Issues](https://github.com/plugin-warp/pluginwarp/issues)** page.  
+1. Suggesting the plugin via the **[GitHub Issues](https://github.com/WarpCore/Impact/issues)** page.  
 2. Sharing details or links to the plugin for review.  
 
 This project is focused on collecting and sharing, not creating, so plugin authorship credits go to their respective creators.  
-
----
-
-## License  
-
-The PluginWarp collection is shared under the [PW License](LICENSE). Each individual plugin is subject to its own license as provided by its creator.  
+ 
 
 ---
 
